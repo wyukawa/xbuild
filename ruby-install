@@ -70,7 +70,7 @@ fi
     export PATH="$LOCATION"/bin:"$PATH"
     gems="pry"
     if [ ! -x "$LOCATION"/bin/bundle ]; then
-        gems="bundler $gems"
+        gems="bundler -v 1.11.2"
     fi
     set -e
     "$LOCATION"/bin/gem install --no-document $gems > /tmp/$USER-ruby-install-bundler.log 2>&1
